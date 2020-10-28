@@ -36,6 +36,16 @@ public class UserRegistration
 			return "VALID";
 		else
 			return "INVALID";
-		
+	}
+	
+	public String validMobileNumber(String phno)
+	{
+		String regex = "^(91){1}[ ][6-9]{1}[0-9]{9,9}$";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(phno);
+		if(p.matcher(phno).matches())
+			return "VALID";
+		else
+			return "INVALID";
 	}
 }
