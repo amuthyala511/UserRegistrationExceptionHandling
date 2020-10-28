@@ -92,4 +92,15 @@ public class UserRegistration
 		else
 			return "INVALID";
 	}
+
+	public String validateEmailSamples(String emailid)
+	{
+		String regex = "^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?$";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(emailid);
+		if(p.matcher(emailid).matches())
+			return "VALID";
+		else
+			return "INVALID";
+	}
 }
