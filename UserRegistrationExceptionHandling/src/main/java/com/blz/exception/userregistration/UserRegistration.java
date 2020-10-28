@@ -48,4 +48,15 @@ public class UserRegistration
 		else
 			return "INVALID";
 	}
+
+	public String validPasswordRule1(String pswd)
+	{
+		String regex = "^[a-zA-Z0-9@#!_]{8,}";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(pswd);
+		if(p.matcher(pswd).matches())
+			return "VALID";
+		else
+			return "INVALID";
+	}
 }
