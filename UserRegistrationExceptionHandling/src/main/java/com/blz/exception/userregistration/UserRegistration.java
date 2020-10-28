@@ -81,4 +81,15 @@ public class UserRegistration
 		else
 			return "INVALID";
 	}
+
+	public String validPasswordRule4(String pswd)
+	{
+		String regex = "^[a-zA-Z0-9]{5,}[A-Z]{1}[0-9]{1}[@#!_]{1}[a-zA-Z0-9]$";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(pswd);
+		if(p.matcher(pswd).matches())
+			return "VALID";
+		else
+			return "INVALID";
+	}
 }
