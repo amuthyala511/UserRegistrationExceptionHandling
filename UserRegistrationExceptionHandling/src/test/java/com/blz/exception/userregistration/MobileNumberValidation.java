@@ -30,7 +30,7 @@ public class MobileNumberValidation
 	}
 	
 	@Test
-	public void givenPhno_startWithCountryCode_FollowedByNoSpace_AndHas10digits_ReturnInvalid()
+	public void givenPhno_startWithCountryCode_NoSpace_AndHas10digits_ReturnInvalid()
 	{
 		String result = u.validMobileNumber("917098654321");
 		Assert.assertEquals("INVALID", result);
@@ -54,6 +54,20 @@ public class MobileNumberValidation
 	public void givenPhno_startWithCountryCode_FollowedBySpace_HasMorethan10digits_ReturnInvalid()
 	{
 		String result = u.validMobileNumber("91 70986543218");
+		Assert.assertEquals("INVALID", result);
+	}
+	
+	@Test
+	public void givenPhno_startWithSpecialChar_FollowedBySpace_Has10digits_ReturnInvalid()
+	{
+		String result = u.validMobileNumber("+91 70986543218");
+		Assert.assertEquals("INVALID", result);
+	}
+	
+	@Test
+	public void givenPhno_startWithCountryCode_FollowedBySpace_10digitsStartwithLessthan6_ReturnInvalid()
+	{
+		String result = u.validMobileNumber("91 50986543218");
 		Assert.assertEquals("INVALID", result);
 	}
 
