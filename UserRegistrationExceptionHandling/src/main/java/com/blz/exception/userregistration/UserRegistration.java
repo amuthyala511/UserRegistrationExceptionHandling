@@ -15,4 +15,15 @@ public class UserRegistration
 		else
 			return "INVALID";
 	}
+	
+	public String validLastName(String lname)
+	{
+		String regex = "^[A-Z][a-z]{2,}$";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(lname);
+		if(p.matcher(lname).matches())
+			return "VALID";
+		else
+			return "INVALID";
+	}
 }
