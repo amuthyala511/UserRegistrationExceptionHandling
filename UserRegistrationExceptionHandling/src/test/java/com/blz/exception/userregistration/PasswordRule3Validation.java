@@ -27,6 +27,7 @@ public class PasswordRule3Validation
 	{
 		String result = u.validPasswordRule3("as4@dFg!");
 		Assert.assertEquals("VALID", result);
+		System.out.println("Successfully Passed");
 	}
 	
 	@Test
@@ -34,6 +35,7 @@ public class PasswordRule3Validation
 	{
 		String result = u.validPasswordRule3("asDf@gh#");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 	
 	@Test
@@ -41,6 +43,7 @@ public class PasswordRule3Validation
 	{
 		String result = u.validPasswordRule3("as3dfg@hj");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 	
 	@Test
@@ -48,5 +51,6 @@ public class PasswordRule3Validation
 	{
 		String result = u.validPasswordRule3("a3s@Df");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 }

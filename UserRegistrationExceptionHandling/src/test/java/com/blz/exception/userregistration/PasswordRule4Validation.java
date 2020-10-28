@@ -26,6 +26,7 @@ public class PasswordRule4Validation
 	{
 		String result = u.validPasswordRule4("as4@dFgh");
 		Assert.assertEquals("VALID", result);
+		System.out.println("Successfully Passed");
 	}
 	
 	@Test
@@ -33,6 +34,7 @@ public class PasswordRule4Validation
 	{
 		String result = u.validPasswordRule4("as4DdFghj");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 	
 	@Test
@@ -40,6 +42,7 @@ public class PasswordRule4Validation
 	{
 		String result = u.validPasswordRule4("as4@dFg#j");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 
 }

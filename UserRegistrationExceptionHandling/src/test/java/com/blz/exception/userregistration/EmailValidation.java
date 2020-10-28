@@ -27,6 +27,7 @@ public class EmailValidation
 	{
 		String result = u.validEmailAddress("abc@bl.co");
 		Assert.assertEquals("VALID", result);
+		System.out.println("Successfully Passed");
 	}
 	
 	@Test
@@ -34,6 +35,7 @@ public class EmailValidation
 	{
 		String result = u.validEmailAddress("abc.xyz@bl.co.in");
 		Assert.assertEquals("VALID", result);
+		System.out.println("Successfully Passed");
 	}
 	
 	@Test
@@ -41,6 +43,7 @@ public class EmailValidation
 	{
 		String result = u.validEmailAddress("abc.xyz.in");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 
 }

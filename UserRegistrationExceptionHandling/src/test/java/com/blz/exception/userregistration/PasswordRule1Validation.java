@@ -26,6 +26,7 @@ public class PasswordRule1Validation
 	{
 		String result = u.validPasswordRule1("as_Df@gh");
 		Assert.assertEquals("VALID", result);
+		System.out.println("Successfully Passed");
 	}
 	
 	@Test
@@ -33,6 +34,7 @@ public class PasswordRule1Validation
 	{
 		String result = u.validPasswordRule1("as_Df@g");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 	
 }

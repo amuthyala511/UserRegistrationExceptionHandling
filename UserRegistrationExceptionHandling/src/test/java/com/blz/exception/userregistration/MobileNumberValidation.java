@@ -27,6 +27,7 @@ public class MobileNumberValidation
 	{
 		String result = u.validMobileNumber("91 7098654321");
 		Assert.assertEquals("VALID", result);
+		System.out.println("Successfully Passed");
 	}
 	
 	@Test
@@ -34,6 +35,7 @@ public class MobileNumberValidation
 	{
 		String result = u.validMobileNumber("917098654321");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 	
 	@Test
@@ -41,6 +43,7 @@ public class MobileNumberValidation
 	{
 		String result = u.validMobileNumber("7098654321");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 	
 	@Test
@@ -48,6 +51,7 @@ public class MobileNumberValidation
 	{
 		String result = u.validMobileNumber("91 709865432");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 	
 	@Test
@@ -55,6 +59,7 @@ public class MobileNumberValidation
 	{
 		String result = u.validMobileNumber("91 70986543218");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 	
 	@Test
@@ -62,6 +67,7 @@ public class MobileNumberValidation
 	{
 		String result = u.validMobileNumber("+91 70986543218");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 	
 	@Test
@@ -69,6 +75,7 @@ public class MobileNumberValidation
 	{
 		String result = u.validMobileNumber("91 50986543218");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 
 }

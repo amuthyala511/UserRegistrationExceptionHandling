@@ -26,6 +26,7 @@ public class LastNameValidation
 	{
 		String result = u.validLastName("Sri");
 		Assert.assertEquals("VALID", result);
+		System.out.println("Successfully Passed");
 	}
 	
 	@Test
@@ -33,6 +34,7 @@ public class LastNameValidation
 	{
 		String result = u.validLastName("sri");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 	
 	@Test
@@ -40,6 +42,7 @@ public class LastNameValidation
 	{
 		String result = u.validLastName("Sr");
 		Assert.assertEquals("INVALID", result);
+		System.out.println("Unsuccessful");
 	}
 
 }
